@@ -6,7 +6,7 @@
 
 ![Incrementor Tool showcase](img/showcase.gif)
 
-A simple increment and decrement tool built with HTML, CSS, and JavaScript. This project is designed to improve coding skills, logical thinking, and web design knowledge.
+A simple increment and decrement tool built with HTML, CSS and JavaScript. This project is designed to improve coding skills, logical thinking, and web design knowledge.
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ A simple increment and decrement tool built with HTML, CSS, and JavaScript. This
 
 ## ❓ About
 
-**Incrementor Tool** is a straightforward project that provides basic increment and decrement functionality. It allows users to increase or decrease a counter value with simple buttons. This tool was built as a way to practice front-end development, focusing on HTML for structure, CSS for styling, and JavaScript for functionality.
+**Incrementor Tool** is a straightforward project that provides basic increment and decrement functionality. It allows users to increase or decrease a counter value with simple buttons. This tool was built as a way to practice front-end development, focusing on HTML for structure, CSS for styling and JavaScript for functionality.
 
 ## ✨ Features
 
