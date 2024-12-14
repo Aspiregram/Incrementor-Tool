@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <title>Incrementor Tool | Aspiregram</title>
+    <meta name="author" content="Aspiregram" />
+    <meta
+      name="description"
+      content="A simple increment and decrement function utilizing HTML, CSS and JavaScript"
+    />
+  </head>
+  <body data-theme="anchor">
+    <div class="counter-wrapper">
+      <div class="counter-ui">
+        <!-- Settings -->
+        <div class="settings-container">
+          <span
+            id="settings-toggle"
+            class="settings-span"
+            title="Settings"
+          ></span>
+          <div class="theme-panel">
+            <span
+              id="anchor"
+              class="color-option"
+              title="Anchor"
+              aria-label="Anchor color option"
+            ></span>
+            <span
+              id="black"
+              class="color-option"
+              title="Black"
+              aria-label="Black color option"
+            ></span>
+            <span
+              id="blue"
+              class="color-option"
+              title="Blue"
+              aria-label="Blue color option"
+            ></span>
+            <span
+              id="brown"
+              class="color-option"
+              title="Brown"
+              aria-label="Brown color option"
+            ></span>
+            <span
+              id="bumblebee"
+              class="color-option"
+              title="Bumblebee"
+              aria-label="Bumblebee color option"
+            ></span>
+            <span
+              id="eggplant"
+              class="color-option"
+              title="Eggplant"
+              aria-label="Eggplant color option"
+            ></span>
+            <span
+              id="green"
+              class="color-option"
+              title="Green"
+              aria-label="Green color option"
+            ></span>
+            <span
+              id="grey"
+              class="color-option"
+              title="Grey"
+              aria-label="Grey color option"
+            ></span>
+            <span
+              id="pink"
+              class="color-option"
+              title="Pink"
+              aria-label="Pink color option"
+            ></span>
+            <span
+              id="red"
+              class="color-option"
+              title="Red"
+              aria-label="Red color option"
+            ></span>
+            <span
+              id="sacramento"
+              class="color-option"
+              title="Sacramento"
+              aria-label="Sacramento color option"
+            ></span>
+            <span
+              id="violet"
+              class="color-option"
+              title="Violet"
+              aria-label="Violet color option"
+            ></span>
+          </div>
+          <span id="counter-reset" class="settings-span" title="Reset"></span>
+        </div>
+        <!-- Incrementor Tool -->
+        <div class="counter-controls">
+          <button
+            type="button"
+            id="counter-increment"
+            class="counter-button"
+            aria-label="Increment"
+          >
+            +
+          </button>
+          <span class="counter-display" aria-live="polite">0</span>
+          <button
+            type="button"
+            id="counter-decrement"
+            class="counter-button"
+            aria-label="Decrement"
+          >
+            -
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

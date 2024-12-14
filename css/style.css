@@ -1,0 +1,279 @@
+/* Global */
+
+:root {
+  --anchor-color: #3e424b;
+  --black-color: #000000;
+  --blue-color: #0018f9;
+  --brown-color: #7c4700;
+  --bumblebee-color: #fcd12a;
+  --eggplant-color: #311432;
+  --green-color: #3bb143;
+  --grey-color: #828282;
+  --pink-color: #fc0fc0;
+  --red-color: #d30000;
+  --sacramento-color: #043927;
+  --violet-color: #b200ed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Settings */
+
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 42rem;
+  height: 100vh;
+}
+
+.counter-ui {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.settings-container {
+  display: flex;
+  gap: 10px;
+}
+
+#settings-toggle {
+  content: url(../img/cog.svg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes reversespin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-180deg);
+  }
+}
+
+#counter-reset {
+  content: url(../img/reset.svg);
+}
+
+.settings-span {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transform-origin: center;
+  transition: 0.2s ease filter, 0.2s ease transform;
+}
+
+.settings-span:hover {
+  filter: brightness(90%);
+  transform: scale(0.95);
+}
+
+.settings-span:active {
+  filter: brightness(85%);
+  transform: scale(0.9);
+}
+
+.theme-panel {
+  overflow: auto;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.active {
+  display: flex;
+}
+
+@keyframes open {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+#anchor {
+  background-color: var(--anchor-color);
+}
+
+#black {
+  background-color: var(--black-color);
+}
+
+#blue {
+  background-color: var(--blue-color);
+}
+
+#brown {
+  background-color: var(--brown-color);
+}
+
+#bumblebee {
+  background-color: var(--bumblebee-color);
+}
+
+#eggplant {
+  background-color: var(--eggplant-color);
+}
+
+#green {
+  background-color: var(--green-color);
+}
+
+#grey {
+  background-color: var(--grey-color);
+}
+
+#pink {
+  background-color: var(--pink-color);
+}
+
+#red {
+  background-color: var(--red-color);
+}
+
+#sacramento {
+  background-color: var(--sacramento-color);
+}
+
+#violet {
+  background-color: var(--violet-color);
+}
+
+.color-option {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transform-origin: center;
+  transition: 0.2s ease filter, 0.2s ease transform;
+}
+
+.color-option:hover {
+  filter: brightness(90%);
+  transform: scale(0.9);
+}
+
+.color-option:active {
+  filter: brightness(85%);
+  transform: scale(0.8);
+}
+
+/* Incrementor Tool */
+
+.counter-controls {
+  display: flex;
+}
+
+.counter-display {
+  width: 100%;
+  padding: 13px;
+  background-color: #ffffff;
+  text-align: center;
+  color: var(--anchor-color);
+  font-size: 65px;
+  font-weight: bold;
+}
+
+#counter-increment {
+  border-top-left-radius: none;
+  border-bottom-left-radius: none;
+}
+
+#counter-decrement {
+  border-top-right-radius: none;
+  border-bottom-right-radius: none;
+}
+
+.counter-button {
+  padding: 1rem;
+  background-color: var(--anchor-color);
+  font-size: 30px;
+  color: #ffffff;
+  transition: 0.2s ease filter;
+}
+
+.counter-button:hover {
+  filter: brightness(90%);
+}
+
+.counter-button:active {
+  filter: brightness(85%);
+}
+
+/* RWD */
+
+@media (min-width: 1024px) {
+  .settings-span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .theme-panel {
+    overflow: hidden;
+  }
+
+  .counter-display {
+    font-size: 30px;
+  }
+
+  #counter-increment {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  #counter-decrement {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
