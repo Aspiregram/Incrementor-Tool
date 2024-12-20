@@ -4,7 +4,7 @@
 [![CSS](https://img.shields.io/badge/CSS-1572B6?logo=css3&logoColor=fff)](https://github.com/topics/css3)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](https://github.com/topics/javascript)
 
-![Incrementor Tool showcase](img/showcase.gif)
+![Incrementor Tool showcase](assets/showcase.gif)
 
 A simple increment and decrement tool built with HTML, CSS and JavaScript. This project is designed to improve coding skills, logical thinking, and web design knowledge.
 
