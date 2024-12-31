@@ -17,7 +17,7 @@ body {
 }
 
 button {
-  border: none;
+  border: 1px solid #ffffff;
   cursor: pointer;
 }
 
@@ -25,9 +25,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
   max-width: 42rem;
   height: 100vh;
+  margin: 0 auto;
 }
 
 .counter-ui {
@@ -72,34 +72,36 @@ button {
   display: inline-block;
   width: 45px;
   height: 45px;
-  cursor: pointer;
   transform-origin: center;
-  transition: 0.2s ease filter, 0.2s ease transform;
+  transition: 0.2s ease transform, 0.2s ease filter;
+  cursor: pointer;
 }
 
 .settings-span:hover {
-  filter: brightness(90%);
   transform: scale(0.95);
+  filter: brightness(90%);
 }
 
 .settings-span:active {
-  filter: brightness(85%);
   transform: scale(0.9);
+  filter: brightness(85%);
 }
 
 .theme-panel {
-  overflow: auto;
   display: none;
   align-items: center;
   gap: 10px;
-  padding: 0 10px;
   width: 100%;
+  padding: 0 10px;
   border-radius: 10px;
   background-color: #ffffff;
 }
 
 .active {
   display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 @keyframes open {
@@ -171,23 +173,24 @@ button {
 }
 
 .color-option {
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  width: 40px;
-  height: 20px;
+  flex-shrink: 0;
+  width: 60px;
+  height: 30px;
   border-radius: 5px;
-  cursor: pointer;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   transform-origin: center;
-  transition: 0.2s ease filter, 0.2s ease transform;
+  transition: 0.2s ease transform, 0.2s ease filter;
+  cursor: pointer;
 }
 
 .color-option:hover {
-  filter: brightness(90%);
   transform: scale(0.9);
+  filter: brightness(90%);
 }
 
 .color-option:active {
-  filter: brightness(85%);
   transform: scale(0.8);
+  filter: brightness(85%);
 }
 
 /* Incrementor Tool */
@@ -198,32 +201,40 @@ button {
 
 .counter-controls {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .counter-display {
+  order: -1;
+  align-content: center;
   width: 100%;
+  height: 30vh;
   padding: 13px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   background-color: #ffffff;
-  text-align: center;
-  color: #3e424b;
   font-size: 65px;
   font-weight: bold;
+  text-align: center;
+  color: #3e424b;
 }
 
 #counter-increment {
-  border-top-left-radius: none;
-  border-bottom-left-radius: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 #counter-decrement {
-  border-top-right-radius: none;
-  border-bottom-right-radius: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .counter-button {
+  width: 50%;
+  height: 64vh;
   padding: 1rem;
   background-color: #3e424b;
-  font-size: 30px;
+  font-size: 45px;
   color: #ffffff;
   transition: 0.2s ease filter;
 }
@@ -239,16 +250,34 @@ button {
 /* RWD */
 
 @media (min-width: 1024px) {
+  button {
+    border: none;
+  }
+
   .settings-span {
     width: 30px;
     height: 30px;
   }
 
-  .theme-panel {
-    overflow: hidden;
+  .active {
+    overflow-x: hidden;
+  }
+
+  .color-option {
+    flex-shrink: initial;
+    width: 40px;
+    height: 20px;
+  }
+
+  .counter-controls {
+    flex-wrap: nowrap;
   }
 
   .counter-display {
+    order: 0;
+    height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     font-size: 30px;
   }
 
@@ -260,5 +289,11 @@ button {
   #counter-decrement {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  .counter-button {
+    width: auto;
+    height: auto;
+    font-size: 30px;
   }
 }
