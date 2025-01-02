@@ -47,10 +47,3 @@ cd Incrementor-Tool
 ## 📜 License
 
 This project is licensed under the MIT License. For further details, read this [file](LICENSE).
-
-## 💬 Contacts
-
-If you wish to reach out to me, here are some ways to do it:
-
-- <enzoxol10@gmail.com>
-- [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/enzo-scholl)
