@@ -12,7 +12,6 @@ A simple increment and decrement tool built with HTML, CSS and JavaScript. This 
 - [Features](#-features)
 - [Installation](#️-installation)
 - [License](#-license)
-- [Contacts](#-contacts)
 
 ## ❓ About
 
